@@ -7,9 +7,9 @@
     <link rel="manifest" href="/manifest.json">
     <meta name="apple-mobile-web-app-title" content="Kalkulator Modal">
     <title>Kalkulator Modal Modern</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.51.5/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link href="/css/full.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/css/output.css">
+    <link rel="stylesheet" href="/css/all.min.css">
 </head>
 <body class="bg-base-200 min-h-screen">
     <div class="navbar bg-base-100 shadow-lg">
@@ -130,9 +130,20 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/pdfmake.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.68/vfs_fonts.js"></script>
-    <script src="/js/app3.js"></script>
+    <script src="/js/jquery-3.6.0.min.js"></script>
+    <script src="/js/pdfmake.min.js"></script>
+    <script src="/js/vfs_fonts.js"></script>
+    <script src="/js/app2.js"></script>
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('/sw.js')
+            .then(registration => {
+              console.log('Service Worker registered with scope:', registration.scope);
+            })
+            .catch(error => {
+              console.log('Service Worker registration failed:', error);
+            });
+        }
+      </script>
 </body>
 </html>

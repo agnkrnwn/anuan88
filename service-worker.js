@@ -6,6 +6,7 @@ self.addEventListener('install', function(event) {
           '/',
           '/index.html',
           '/js/app2.js',
+          '/js/app3.js',
           '/js/jquery-3.6.0.min.js',
           '/js/pdfmake.min.js',
           '/js/vfs_fonts.js',
@@ -17,7 +18,6 @@ self.addEventListener('install', function(event) {
           '/service-worker.js',
           '/webfonts/fa-solid-900.ttf',
           '/webfonts/fa-solid-900.woff2',
-          '/icon.png'
 
         ]);
       })
