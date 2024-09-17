@@ -1,15 +1,23 @@
 // service-worker.js
 self.addEventListener('install', function(event) {
     event.waitUntil(
-      caches.open('bold-cache').then(function(cache) {
+      caches.open('boldssd-cache').then(function(cache) {
         return cache.addAll([
           '/',
           '/index.html',
-          '/js/app.js',
-          '/css/app.css',
+          '/js/app2.js',
+          '/js/jquery-3.6.0.min.js',
+          '/js/pdfmake.min.js',
+          '/js/vfs_fonts.js',
+          '/css/all.min.css',
+          '/css/full.css',
+          '/css/output.css',
           '/manifest.json',
           '/icon.png',
           '/service-worker.js',
+          '/webfonts/fa-solid-900.ttf',
+          '/webfonts/fa-solid-900.woff2',
+          '/icon.png'
 
         ]);
       })
